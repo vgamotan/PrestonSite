@@ -1,6 +1,6 @@
 {
   "name": "Remix: foodpropertyadvisory.sg",
-  "description": "Singapore food-grade industrial real estate directory, SFA license suitability sandbox, and Buyer's Stamp Duty yield calculator.",
+  "description": "Singapore food-grade industrial real estate directory, SFA license suitability sandbox, and Buyer\u0027s Stamp Duty yield calculator.",
   "requestFramePermissions": [
     "camera",
     "microphone",
