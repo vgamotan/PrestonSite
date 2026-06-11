@@ -23,6 +23,14 @@ import sckJurongLounge from './assets/images/sck_jurong_lounge_1781181597540.png
 import sckJurongKitchen from './assets/images/sck_jurong_kitchen_1781181612574.png';
 // @ts-ignore
 import sckJurongCorridor from './assets/images/sck_jurong_corridor_1781181627232.png';
+// @ts-ignore
+import smartFoodMandaiExterior from './assets/images/smartfoodmandai_exterior_1781183139681.jpg';
+// @ts-ignore
+import smartFoodMandaiFacility from './assets/images/smartfoodmandai_facility_1781183155914.jpg';
+// @ts-ignore
+import smartFoodMandaiRamp from './assets/images/smartfoodmandai_ramp_1781183170376.jpg';
+// @ts-ignore
+import smartFoodMandaiCorridor from './assets/images/smartfoodmandai_corridor_1781183190658.jpg';
 
 export const PROPERTIES: Property[] = [
   {
@@ -310,12 +318,12 @@ export const PROPERTIES: Property[] = [
     greaseTrapCapacitySq: 'Centralised Stack Ready',
     address: '10 Mandai Estate, Singapore 729907',
     description: 'Smart Food @ Mandai is a landmark, state-of-the-art FREEHOLD 10-storey fully ramped-up B2 food factory development in the high-demand Sungei Kadut Eco-District corridor. Built in 2024 by Smartisan Realty, this facility is engineered for future food ecosystems—featuring separate lifts for raw and cooked food to strictly prevent cross-contamination, and direct ramp-up vehicular loading right at your doorstep up to the 10th storey. The building contains only 84 prestigious production units and 1 ancillary canteen. Select units support multi-brand cloud kitchens, co-sharing arrangements with dual-key layouts, and premium ground-floor spaces (Premium Harvest) boasting 7.0m floor-to-floor heights. Features central stack grease traps, ready municipal gas lines, and high-velocity air curtain spaces optimized for SFA/HACCP certification.',
-    image: 'https://images.unsplash.com/photo-1558449028-b53a39d100fc?auto=format&fit=crop&q=80&w=1200',
+    image: smartFoodMandaiExterior,
     images: [
-      'https://images.unsplash.com/photo-1558449028-b53a39d100fc?auto=format&fit=crop&q=80&w=1200',
-      'https://images.unsplash.com/photo-1590682680695-43b964a3ae17?auto=format&fit=crop&q=80&w=1200',
-      'https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&q=80&w=1200',
-      'https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80&w=1200'
+      smartFoodMandaiExterior,
+      smartFoodMandaiFacility,
+      smartFoodMandaiRamp,
+      smartFoodMandaiCorridor
     ],
     category: 'Food Processing',
     zone: 'Food Zone',
@@ -334,7 +342,7 @@ export const PROPERTIES: Property[] = [
     tenure: 'Freehold',
     expectedCompletion: '31 May 2028 (Vacant Possession)',
     developer: 'Smartisan Realty Pte. Ltd.',
-    projectUrl: 'https://www.orangetee.com/Home/Projects/Properties?ProjectID=1299',
+    projectUrl: 'https://www.smartfoodmandai.com/',
     rawCookedSegregatedLifts: true,
     dualKeyProvision: true,
     unitBreakdown: [
