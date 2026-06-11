@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { ChevronLeft, Calendar, Download, FileSpreadsheet, Building2, ShieldCheck, Mail, Phone, User, Check, Sparkles, ChevronRight } from 'lucide-react';
 import { Property, InquiryFormData } from '../types';
 import { motion } from 'motion/react';
+// @ts-ignore
+import prestonSoonImg from '../assets/images/preston_soon_actual_1781162220560.png';
 
 interface PropertyDetailPageProps {
   property: Property;
@@ -49,7 +51,7 @@ export default function PropertyDetailPage({ property, onBack }: PropertyDetailP
       return;
     }
     setFormSubmitted(true);
-    setNotification({ message: 'Viewing request submitted successfully! Preston Chew will contact you shortly.', type: 'success' });
+    setNotification({ message: 'Viewing request submitted successfully! Preston Soon will contact you shortly.', type: 'success' });
     setTimeout(() => setNotification(null), 6000);
   };
 
@@ -334,6 +336,69 @@ export default function PropertyDetailPage({ property, onBack }: PropertyDetailP
             </div>
           </div>
 
+          {/* Building Tier Breakdown Card */}
+          {property.unitBreakdown && property.unitBreakdown.length > 0 && (
+            <div id="unit-tiers-breakdown-section" className="bg-white border border-slate-200 rounded-lg p-6 shadow-sm space-y-5">
+              <div>
+                <h3 className="font-display text-base font-bold text-primary">
+                  Building Tier Breakdown & Unit Specifications
+                </h3>
+                <p className="text-xs text-slate-500 mt-0.5">
+                  Extracted structural, floor loading, clear clearance, and electrical power parameters from the official B2 industrial planning guidelines.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                {property.unitBreakdown.map((unit, index) => (
+                  <div key={index} className="border border-slate-200 rounded-lg p-4 bg-slate-50/50 hover:bg-slate-50 hover:border-slate-300 transition-all flex flex-col justify-between">
+                    <div>
+                      <div className="flex justify-between items-start gap-2 mb-2">
+                        <div>
+                          <span className={`inline-block px-2 py-0.5 rounded text-[9px] font-bold uppercase tracking-wider border ${
+                            unit.name === 'Premium Harvest' ? 'bg-amber-600/10 text-amber-700 border-amber-500/10' :
+                            unit.name === 'Eden Deluxe' ? 'bg-[#0A2540] text-haccp-teal border-haccp-teal/15' :
+                            unit.name === 'Eden Green' ? 'bg-haccp-teal/10 text-haccp-teal border-haccp-teal/20' :
+                            'bg-indigo-50 text-indigo-700 border-indigo-100'
+                          }`}>
+                            {unit.name} Module
+                          </span>
+                          <h4 className="font-display font-bold text-xs text-primary mt-1.5 shrink-0">{unit.floors}</h4>
+                        </div>
+                      </div>
+
+                      <div className="grid grid-cols-3 gap-2 py-3 my-2 border-y border-dashed border-slate-200 text-[10px] font-mono">
+                        <div>
+                          <span className="text-slate-400 uppercase tracking-wider block text-[8px] font-semibold">CEILING HGT</span>
+                          <strong className="text-slate-700 block mt-0.5 leading-snug">{unit.heightM}</strong>
+                        </div>
+                        <div>
+                          <span className="text-slate-400 uppercase tracking-wider block text-[8px] font-semibold">FLOOR LOAD</span>
+                          <strong className="text-slate-700 block mt-0.5 leading-snug">{unit.loadingKn}</strong>
+                        </div>
+                        <div>
+                          <span className="text-slate-400 uppercase tracking-wider block text-[8px] font-semibold">POWER SUPPLY</span>
+                          <strong className="text-primary font-bold block mt-0.5 leading-snug">{unit.powerPhase}</strong>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="mt-2">
+                      <span className="text-[8px] font-semibold text-slate-400 uppercase tracking-wider block mb-1.5">Functional Features & Access</span>
+                      <ul className="space-y-1.5 text-xs text-slate-600">
+                        {unit.features.map((feature, fIdx) => (
+                          <li key={fIdx} className="flex items-start gap-1.5">
+                            <Check className="h-3 w-3 text-haccp-teal shrink-0 mt-0.5" />
+                            <span className="leading-normal">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Standard Technical Spec Card - 3x2 Grid */}
           <div id="technical-parameters-section" className="border border-slate-200 rounded-lg p-6 bg-white shadow-sm">
             <h4 className="font-display font-bold text-base text-primary mb-4 pb-2 border-b border-slate-100 uppercase tracking-wide">
@@ -554,35 +619,41 @@ export default function PropertyDetailPage({ property, onBack }: PropertyDetailP
             </div>
           </div>
 
-          {/* Preston Chew's Specialist Agent Profile Profile Card */}
+          {/* Preston Soon's Specialist Agent Profile Profile Card */}
           <div id="agent-representative-card" className="bg-gradient-to-br from-[#0A2540] to-slate-900 text-white rounded-lg p-6 border border-slate-800 shadow-md">
             <div className="flex gap-4 items-center">
               <img
-                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=256&h=256"
-                alt="Preston Chew"
+                src={prestonSoonImg}
+                alt="Preston Soon"
                 className="h-16 w-16 rounded-full object-cover border-2 border-haccp-teal bg-slate-800 shadow-sm shrink-0"
                 referrerPolicy="no-referrer"
               />
               <div>
                 <div className="flex items-center gap-1.5 flex-wrap">
-                  <h4 className="font-display font-bold text-base text-white leading-none">Preston Chew</h4>
+                  <h4 className="font-display font-bold text-base text-white leading-none">Preston Soon</h4>
                   <span className="bg-haccp-teal/20 text-haccp-teal text-[10px] font-bold px-2 py-0.5 rounded border border-haccp-teal/30">
                     SFA Expert
                   </span>
                 </div>
                 <p className="text-[11px] text-slate-300 font-medium mt-1 leading-normal">
-                  Senior VP, Food Industrial Property Group
+                  Associate Senior Director
                 </p>
                 <p className="text-[10px] font-mono text-slate-400 mt-0.5">
-                  CEA Reg No: R017482I / ERA Realty
+                  Salesperson (CEA Registration No R067294A)
                 </p>
               </div>
             </div>
             
-            <div className="mt-5 pt-4 border-t border-slate-800 space-y-4 text-xs text-slate-300">
-              <p className="text-[11.5px] leading-relaxed italic text-slate-400">
-                "Specializing in SFA-compliant layout optimization and central kitchen site selection for over 14 years. Let's arrange a joint preview slot."
+            <div className="mt-5 pt-4 border-t border-slate-800 space-y-3.5 text-xs text-slate-300">
+              <div className="text-[11px] font-semibold text-slate-200">
+                OrangeTee & Tie Licenced Real Estate Agency (L3009250K)
+              </div>
+              <p className="text-[11px] leading-relaxed text-slate-300">
+                Property Advisors for Buy, Sell and Rent and Redevelopment Cosultancy.
               </p>
+              <div className="text-[10px] font-mono text-haccp-teal uppercase tracking-wider font-semibold">
+                Residential | Commercial | Industrial | Overseas
+              </div>
               
               <div className="flex flex-col gap-2.5 pt-1 font-mono text-xs">
                 <a 
@@ -595,13 +666,13 @@ export default function PropertyDetailPage({ property, onBack }: PropertyDetailP
                   <span className="font-bold">+65 9188 5738</span>
                 </a>
                 <a 
-                  href="mailto:preston.chew@foodpropertyadvisory.sg"
+                  href="mailto:preston.soon@foodpropertyadvisory.sg"
                   className="flex items-center gap-2.5 text-slate-200 hover:text-haccp-teal transition-all group w-fit"
                 >
                   <div className="h-7 w-7 rounded-full bg-slate-800 flex items-center justify-center border border-slate-700 group-hover:border-haccp-teal transition-colors">
                     <Mail className="h-3.5 w-3.5 text-haccp-teal group-hover:scale-110 transition-transform" />
                   </div>
-                  <span className="truncate max-w-[200px] font-bold">preston.chew@foodpropertyadvisory.sg</span>
+                  <span className="truncate max-w-[200px] font-bold">preston.soon@foodpropertyadvisory.sg</span>
                 </a>
               </div>
             </div>
@@ -614,7 +685,7 @@ export default function PropertyDetailPage({ property, onBack }: PropertyDetailP
               Schedule Site Viewing
             </h3>
             <p className="text-xs text-slate-600 mb-5 leading-normal">
-              Secure a private 1-on-1 walkthrough and SFA cleanroom compliance layout review with Preston Chew.
+              Secure a private 1-on-1 walkthrough and SFA cleanroom compliance layout review with Preston Soon.
             </p>
 
             {formSubmitted ? (
@@ -626,7 +697,7 @@ export default function PropertyDetailPage({ property, onBack }: PropertyDetailP
                   Viewing Request Registered!
                 </h4>
                 <p className="text-xs text-slate-500 mt-2 leading-relaxed">
-                  Preston Chew will reach out at <strong>{formData.email}</strong> shortly to lock in your inspection agenda slot.
+                  Preston Soon will reach out at <strong>{formData.email}</strong> shortly to lock in your inspection agenda slot.
                 </p>
                 <button
                   onClick={() => setFormSubmitted(false)}

@@ -41,6 +41,16 @@ export interface Property {
   projectUrl?: string;
   rawCookedSegregatedLifts?: boolean;
   dualKeyProvision?: boolean;
+  unitBreakdown?: UnitSpecifications[];
+}
+
+export interface UnitSpecifications {
+  name: string;
+  floors: string;
+  heightM: string;
+  loadingKn: string;
+  powerPhase: string;
+  features: string[];
 }
 
 export interface SearchFilters {

@@ -1,31 +1,130 @@
 import { Property } from './types';
+// @ts-ignore
+import foodaxisExterior from './assets/images/foodaxis_exterior_1781162845460.png';
+// @ts-ignore
+import foodaxisInterior from './assets/images/foodaxis_interior_1781162860441.png';
+// @ts-ignore
+import foodaxisLoadingBay from './assets/images/foodaxis_loading_bay_1781162875681.png';
+// @ts-ignore
+import foodaxisColdRoom from './assets/images/foodaxis_cold_room_1781162887942.png';
+// @ts-ignore
+import foodascentExterior from './assets/images/foodascent_exterior_1781163422375.png';
+// @ts-ignore
+import foodascentInterior from './assets/images/foodascent_interior_1781163446537.png';
+// @ts-ignore
+import foodascentRampUp from './assets/images/foodascent_ramp_up_1781163461576.png';
+// @ts-ignore
+import foodascentCanteen from './assets/images/foodascent_canteen_1781163479272.png';
+// @ts-ignore
+import sckJurongExterior from './assets/images/sck_jurong_exterior_1781181579417.png';
+// @ts-ignore
+import sckJurongLounge from './assets/images/sck_jurong_lounge_1781181597540.png';
+// @ts-ignore
+import sckJurongKitchen from './assets/images/sck_jurong_kitchen_1781181612574.png';
+// @ts-ignore
+import sckJurongCorridor from './assets/images/sck_jurong_corridor_1781181627232.png';
 
 export const PROPERTIES: Property[] = [
   {
     id: 'prop-senoko-foodaxis',
-    title: 'Senoko Food Axis Hub',
+    title: 'FoodAxis @ Senoko',
     location: 'Senoko Loop, Sembawang',
     region: 'North',
-    price: 28000,
+    price: 24800,
     type: 'Lease',
-    pricePerSqft: 2.25,
+    pricePerSqft: 2.00,
     floorAreaSqft: 12400,
-    ceilingHeightM: 7.2,
-    floorLoadingKnSqm: 25,
-    powerSupplyAmps: '300 Amp 3-Phase',
+    ceilingHeightM: 7.0,
+    floorLoadingKnSqm: 15,
+    powerSupplyAmps: '150 Amp to 300 Amp 3-Phase',
     sfaApproved: true,
     haccpCertified: true,
     hasColdRoom: true,
     gasSupply: true,
-    greaseTrapCapacitySq: '2,000 Liters',
-    address: '12 Senoko Loop, Food Zone, Singapore 758149',
-    description: 'Premium multi-user SFA-approved food industrial development. Fully integrated with high-capacity drainage, ramp-up options, and deep structural capacity for immediate central kitchen setup. Features antibacterial epoxy wall coatings and a direct high-pressure connection to the Singapore industrial city-gas grid.',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200',
+    greaseTrapCapacitySq: 'Centralised Interceptor Stack',
+    address: '10 & 12 Senoko Loop, Sembawang, Singapore 758141',
+    description: 'FoodAxis @ Senoko is a purpose-built, highly-specialised five-storey Business 2 food industrial facility developed by CapitaLand (Ascendas). Designed specifically for large-scale central kitchens, food preparation, and cold-room logistics, this development features a ramp-up structure allowing up to 20-foot container trucks direct doorstep loading access. To fully support SFA and HACCP guidelines, FoodAxis enforces strict hygiene standards with separate service and passenger lift systems, segregated raw and cooked handling zones, high-capacity centralized grease interceptors, and high-velocity mechanical ventilation exhaust shafts. On-site worker amenities include an ancillary food canteen and a premium air curtain lobby.',
+    image: foodaxisExterior,
     images: [
-      'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200',
-      'https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&q=80&w=1200',
-      'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200',
-      'https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80&w=1200'
+      foodaxisExterior,
+      foodaxisInterior,
+      foodaxisLoadingBay,
+      foodaxisColdRoom
+    ],
+    category: 'Food Processing',
+    zone: 'Food Zone',
+    tenancyStatus: 'Vacant',
+    loadingBays: 8,
+    complianceScore: 100,
+    detailedCompliance: {
+      antiBacterialEpoxy: true,
+      properFlowSegregation: true,
+      mechanicalVentilation: true,
+      pestProofingReady: true,
+      personnelSanitationAnteroom: true
+    },
+    yearlyTax: 10400,
+    maintenanceFeeMonthly: 920,
+    tenure: '30-year Leasehold',
+    expectedCompletion: 'Completed (August 2013)',
+    developer: 'CapitaLand',
+    projectUrl: 'https://www.capitaland.com/sg/en/lease/businesspark-industrial-logistics-listing/foodaxis-senoko.html',
+    rawCookedSegregatedLifts: true,
+    dualKeyProvision: false,
+    unitBreakdown: [
+      {
+        name: 'Premier Processing Zone',
+        floors: '1st Storey (Premium Ground-Floor Loading Units)',
+        heightM: '7.0m Floor-to-Floor Height',
+        loadingKn: '15.0 kN/m²',
+        powerPhase: '200A to 300A 3-Phase',
+        features: [
+          'Direct doorstep dock-levellers for sub-zero cold chain logistics',
+          'Heavy infrastructure floor loading ideal for multi-tonne equipment',
+          'Immediate city-gas mains infrastructure connection and custom high exhaust lines',
+          'Designed specifically for raw preparation of meat, poultry, and fish processing'
+        ]
+      },
+      {
+        name: 'Upper Kitchen Suite',
+        floors: '2nd to 5th Storey (Ramp-up Processing Suites)',
+        heightM: '6.0m Floor-to-Floor Height',
+        loadingKn: '12.5 kN/m²',
+        powerPhase: '150A 3-Phase',
+        features: [
+          'Direct drive-up access for 10-tonne trucks right to unit entrance roll-up doors',
+          'Heavy-volume mechanical extractors ready for frying, roasting, and high-heat central kitchens',
+          'SFA/HACCP layout pre-approval potential for high-volume caterers and bakeries',
+          'Dedicated dry waste chutes and raw-finished food lift segregation'
+        ]
+      }
+    ]
+  },
+  {
+    id: 'prop-tuas-mega',
+    title: 'Food Ascent @ Tuas',
+    location: 'Tuas Bay Lane, Tuas',
+    region: 'West',
+    price: 3480000,
+    type: 'Sale',
+    pricePerSqft: 1140.98,
+    floorAreaSqft: 3050,
+    ceilingHeightM: 7.0,
+    floorLoadingKnSqm: 15.0,
+    powerSupplyAmps: '150 Amp 3-Phase',
+    sfaApproved: true,
+    haccpCertified: true,
+    hasColdRoom: true,
+    gasSupply: true,
+    greaseTrapCapacitySq: 'Centralised Stack Ready',
+    address: '10 Tuas Bay Lane, Singapore 637302',
+    description: 'Food Ascent @ Tuas is a state-of-the-art, purpose-built, Business 2 ramp-up food-factory industrial development developed by Soilbuild Group. Situated in the prestigious Tuas Bay Lane food zone, this 9-storey facility is meticulously engineered to meet stringent SFA and HACCP standards for modern central kitchens, food preparation, cold logistics, food labs, and automated packaging. The development features a total of 101 production units and an on-site ancillary food canteen, and is built to support modern eco-responsibilities, including natural passive ventilation layouts, vertical greenery pockets, and high-capacity rooftop solar panel compatibility. With a spacious curved concrete ramp designed to allow up to 20-foot container trucks drive-up doorstep access, doorstep raw ingredient unloading and cooked food vehicle logistics are highly convenient. It features separate elevators and corridors for raw and cooked items to strictly prevent cross-contamination, separate dry and wet waste chutes, centralised stack grease trap lines, pre-built high-velocity mechanical ventilation ducts, and a 150 Amp 3-phase power supply for stable, high-volume culinary operations.',
+    image: foodascentExterior,
+    images: [
+      foodascentExterior,
+      foodascentInterior,
+      foodascentRampUp,
+      foodascentCanteen
     ],
     category: 'Food Processing',
     zone: 'Food Zone',
@@ -39,90 +138,117 @@ export const PROPERTIES: Property[] = [
       pestProofingReady: true,
       personnelSanitationAnteroom: true
     },
-    yearlyTax: 12400,
-    maintenanceFeeMonthly: 850
-  },
-  {
-    id: 'prop-tuas-mega',
-    title: 'Tuas Mega Food Gateway',
-    location: 'Tuas Bay Drive, Tuas',
-    region: 'West',
-    price: 14500000,
-    type: 'Sale',
-    pricePerSqft: 329.54,
-    floorAreaSqft: 44000,
-    ceilingHeightM: 12.0,
-    floorLoadingKnSqm: 35,
-    powerSupplyAmps: '800 Amp 3-Phase',
-    sfaApproved: true,
-    haccpCertified: true,
-    hasColdRoom: true,
-    gasSupply: false,
-    greaseTrapCapacitySq: '3,500 Liters',
-    address: '45 Tuas Bay Drive, Singapore 637301',
-    description: 'Unrivaled high-spec cold room logistics terminal with state-of-the-art automatic storage & retrieval system (ASRS) potential. Super-dense floor loading capacity of 35 KN/sqm, perfect for heavy industrial sub-zero racking. Dual dock-leveling system with direct container ramp-up access.',
-    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1200',
-    images: [
-      'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1200',
-      'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=1200',
-      'https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80&w=1200',
-      'https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80&w=1200'
-    ],
-    category: 'Cold Chain Logistics',
-    zone: 'Business 2 (Industrial)',
-    tenancyStatus: 'Vacant',
-    loadingBays: 8,
-    complianceScore: 95,
-    detailedCompliance: {
-      antiBacterialEpoxy: true,
-      properFlowSegregation: false,
-      mechanicalVentilation: true,
-      pestProofingReady: true,
-      personnelSanitationAnteroom: true
-    },
-    yearlyTax: 38000,
-    maintenanceFeeMonthly: 2100
+    yearlyTax: 16200,
+    maintenanceFeeMonthly: 620,
+    tenure: '30-year Leasehold',
+    expectedCompletion: 'TOP Obtained (2025)',
+    developer: 'Soilbuild Group Holdings Ltd.',
+    projectUrl: 'https://www.foodascent.sg/',
+    rawCookedSegregatedLifts: true,
+    dualKeyProvision: true,
+    unitBreakdown: [
+      {
+        name: 'Prime Harvest Floor',
+        floors: '1st Storey (Premium Ground level Ground-Floor Units)',
+        heightM: '7.0m Full Height (supports premium mezzanine workspace)',
+        loadingKn: '15.0 kN/m²',
+        powerPhase: '150 Amp 3-Phase (supports massive walk-in cold rooms)',
+        features: [
+          'Dual dock-leveling provisions with direct street-level access',
+          'Immediate town gas connectivity with central grease interceptor readiness',
+          'SFA certified for fast-paced chilled storage and high-load production',
+          'Spacious overhead area configured for heavy vertical cargo storage'
+        ]
+      },
+      {
+        name: 'Elite Production Zone',
+        floors: '2nd to 9th Storeys (Ramp-up Units)',
+        heightM: '5.95m Clear Operating Height',
+        loadingKn: '12.5 kN/m²',
+        powerPhase: '100A to 125A 3-Phase',
+        features: [
+          'Direct ramp-up forklift and rigid truck access right to your doorstep',
+          'Exquisite dual-key provisions ready for kitchen co-sharing brands',
+          'Dedicated separated exhaust shafts for clean mechanical ventilation',
+          'Centralised waste management chute separate from raw cargo entry'
+        ]
+      }
+    ]
   },
   {
     id: 'prop-jurong-kitchen',
-    title: 'Jurong Central Kitchen Suite',
-    location: 'Jalan Tepong, Jurong Port',
+    title: 'Smart City Kitchens @ Jurong West',
+    location: 'Chin Bee Avenue, Jurong West',
     region: 'West',
-    price: 16500,
+    price: 18500,
     type: 'Lease',
-    pricePerSqft: 2.42,
+    pricePerSqft: 2.72,
     floorAreaSqft: 6800,
     ceilingHeightM: 6.0,
     floorLoadingKnSqm: 15,
-    powerSupplyAmps: '150 Amp 3-Phase',
+    powerSupplyAmps: '150 Amp to 250 Amp 3-Phase',
     sfaApproved: true,
-    haccpCertified: false,
-    hasColdRoom: false,
+    haccpCertified: true,
+    hasColdRoom: true,
     gasSupply: true,
-    greaseTrapCapacitySq: '1,500 Liters',
-    address: '8 Jalan Tepong, Fishery Port Industrial Estate, Singapore 619321',
-    description: 'Turnkey boutique central kitchen suite optimized for high-volume catering, ready-to-eat meal deliveries, or confectionery businesses. Strategically located right by major transport arteries with separate ingress/egress channels for raw items and cooked outgoing products to prevent cross-contamination.',
-    image: 'https://images.unsplash.com/photo-1590674899484-d5640e854abe?auto=format&fit=crop&q=80&w=1200',
+    greaseTrapCapacitySq: '1,500 Liters with Centralised Interceptor',
+    address: '17 Chin Bee Avenue, Jurong West, Singapore 619940',
+    description: 'Smart City Kitchens @ Jurong West is a state-of-the-art, SFA-compliant shared cloud kitchen facility designed specifically to support food delivery service brands, quick-service concepts, virtual restaurants, and central preparations. Located in the popular Jurong West (Chin Bee) food ecosystem, this dynamic, high-spec complex holds professional co-sharing commercial kitchen spaces designed for high productivity, low overhead, and rapid scaling. The facility provides an immersive delivery rider pick-up lounge, self-service tracking kiosks, seamless hands-free sanitation bays, integrated floor trench drainage, and automated pest-proofing air curtains. Built with strict unidirectional flow mechanics to prevent cross-contamination, separate grease interceptors, and high-performance kitchen exhaust scrubbers, it provides individual chefs and dining chains the perfect launchpad for Western Singapore.',
+    image: sckJurongExterior,
     images: [
-      'https://images.unsplash.com/photo-1590674899484-d5640e854abe?auto=format&fit=crop&q=80&w=1200',
-      'https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80&w=1200',
-      'https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&q=80&w=1200',
-      'https://images.unsplash.com/photo-1618090584176-7132b9911657?auto=format&fit=crop&q=80&w=1200'
+      sckJurongExterior,
+      sckJurongLounge,
+      sckJurongKitchen,
+      sckJurongCorridor
     ],
     category: 'Central Kitchen',
     zone: 'Food Zone',
     tenancyStatus: 'Tenanted',
-    loadingBays: 2,
-    complianceScore: 84,
+    loadingBays: 4,
+    complianceScore: 100,
     detailedCompliance: {
       antiBacterialEpoxy: true,
       properFlowSegregation: true,
-      mechanicalVentilation: false,
+      mechanicalVentilation: true,
       pestProofingReady: true,
-      personnelSanitationAnteroom: false
+      personnelSanitationAnteroom: true
     },
-    yearlyTax: 7200,
-    maintenanceFeeMonthly: 480
+    yearlyTax: 8400,
+    maintenanceFeeMonthly: 550,
+    tenure: '30-year Leasehold',
+    expectedCompletion: 'Completed (2022)',
+    developer: 'Smart City Kitchens Pte. Ltd.',
+    projectUrl: 'https://www.smartcitykitchens.com/locations/jurongwest/gallery/',
+    rawCookedSegregatedLifts: false,
+    dualKeyProvision: false,
+    unitBreakdown: [
+      {
+        name: 'Standard Culinary Suite',
+        floors: 'Ground & Upper Levels (Fully-equipped individual suites)',
+        heightM: '3.2m working ceiling height',
+        loadingKn: '12.5 kN/m²',
+        powerPhase: '63 Amp to 100 Amp 3-Phase',
+        features: [
+          'Pre-installed high-capacity exhaust duct canopy ready for heavy work',
+          'Dedicated cold and municipal hot/cold water ports with smart metering',
+          'Epoxy resin floor finish with custom wall panels and embedded floor drains',
+          'Perfect for delivery-focused brands, virtual concepts, and bakeries'
+        ]
+      },
+      {
+        name: 'Mega Processing Studio',
+        floors: 'Ground Floor Premium Units',
+        heightM: '4.5m spacious ceiling height',
+        loadingKn: '15.0 kN/m²',
+        powerPhase: '100 Amp to 150 Amp 3-Phase',
+        features: [
+          'Direct proximity to incoming cargo bay for swift supply replenishment',
+          'Double sink configuration, automated mechanical clean air scrubber system',
+          'Extra floor footprint for specialized commercial high-throughput ovens',
+          'Excellent for central retail batch preparation, catering, and pastry production'
+        ]
+      }
+    ]
   },
   {
     id: 'prop-mandai-clean',
@@ -210,7 +336,61 @@ export const PROPERTIES: Property[] = [
     developer: 'Smartisan Realty Pte. Ltd.',
     projectUrl: 'https://www.orangetee.com/Home/Projects/Properties?ProjectID=1299',
     rawCookedSegregatedLifts: true,
-    dualKeyProvision: true
+    dualKeyProvision: true,
+    unitBreakdown: [
+      {
+        name: 'Premium Harvest',
+        floors: '1st Storey (Premium Ground-Floor Units)',
+        heightM: '7.0m plus Mezzanine Level (3.5m loft)',
+        loadingKn: '20.0 kN/m²',
+        powerPhase: '150A to 200A 3-Phase',
+        features: [
+          'High-ceiling configuration with Mezzanine extension',
+          'Doorstep direct unloading and loading access',
+          'Capable of accommodating rigid-framed vehicles of length ≤7.5m',
+          'SFA certified for fast-paced cold storage or processing'
+        ]
+      },
+      {
+        name: 'Eden Deluxe',
+        floors: '2nd and 5th Storey (High-Spec Units)',
+        heightM: '5.95m Clear Height',
+        loadingKn: '12.5 kN/m²',
+        powerPhase: '125A 3-Phase (L2) / 100A 3-Phase (L5)',
+        features: [
+          'Dual-key provisions for co-sharing kitchen spaces',
+          'Direct ramp-up forklift/truck access to entrance doorstep',
+          'SFA/HACCP certified layout potential for high-volume central kitchens',
+          'Adjacent to beautiful communal greenery gardens at level 2 & 5'
+        ]
+      },
+      {
+        name: 'Smart Module',
+        floors: '3rd, 4th, 6th, 7th, 8th and 9th Storeys',
+        heightM: '5.95m Clear Height',
+        loadingKn: '12.5 kN/m²',
+        powerPhase: '100A 3-Phase',
+        features: [
+          'Highly customizable open layout with zero pillars',
+          'Independent centralized wash ventilation chutes',
+          'Direct ramp-up and doorstep loading/unloading area',
+          'Excellent structural support for multi-brand cloud kitchens'
+        ]
+      },
+      {
+        name: 'Eden Green',
+        floors: '10th Storey (Exclusive Top-Floor Units)',
+        heightM: '6.10m to 7.00m Variable Clear Height',
+        loadingKn: '12.5 kN/m²',
+        powerPhase: '100A 3-Phase',
+        features: [
+          'Premium top-tier units with maximum floor-to-floor heights',
+          'Equipped with beautiful communal greenery gardens and rooftop views',
+          'Ideal for premium food innovation labs, research kitchens, or high-end organic processing',
+          'Quiet and decoupled ventilation lines'
+        ]
+      }
+    ]
   },
   {
     id: 'prop-changi-aviation',
